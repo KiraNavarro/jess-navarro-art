@@ -10,6 +10,11 @@
     max-width: 320;
 }
 
+p {
+    color: #232129;
+    margin-bottom: 48px;
+}
+
 /* Navigation */
 
 .nav-links {
@@ -25,3 +30,4 @@
 .nav-link-text {
     color: #663399;
 }
+

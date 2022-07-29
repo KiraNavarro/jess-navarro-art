@@ -7,9 +7,7 @@ const headingAccentStyles = {
   color: "#663399",
 }
 */
-const paragraphStyles = {
-  marginBottom: 48,
-}
+
 /*
 const codeStyles = {
   color: "#8A6534",
@@ -127,7 +125,7 @@ const IndexPage = () => {
       pageTitle='Homepage'
       pageHeading='Homepage'
     >
-        <p style={paragraphStyles}>
+        <p>
           Welcome to this place about learning and sharing.
           <span role="img" aria-label="Sunglasses smiley emoji">
             😎
