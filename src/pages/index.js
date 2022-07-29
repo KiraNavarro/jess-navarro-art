@@ -1,5 +1,6 @@
 import * as React from "react"
 import Layout from "../components/layout"
+import { StaticImage } from "gatsby-plugin-image"
 
 // styles
 /*
@@ -131,6 +132,13 @@ const IndexPage = () => {
             😎
           </span>
         </p>
+        <StaticImage 
+          src="https://images.unsplash.com/photo-1493406300581-484b937cdc41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          alt="CatWalk"
+          placeholder="blurred"
+          loading="lazy"
+          backgroundColor="#663399"
+        />
         <ul style={listStyles}>
           <li style={docLinkStyle}>
             <a
