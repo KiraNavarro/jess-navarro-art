@@ -1,3 +1,9 @@
+.siteTitle {
+    font-size: 3rem;
+    list-style: none;
+    color: #663399;
+}
+
 .pageStyles {
     color: #232129;
     padding: 96px;

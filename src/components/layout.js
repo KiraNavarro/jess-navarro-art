@@ -1,12 +1,25 @@
 import * as React from "react"
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import * as styles from './layout.module.css'
+import Helmet from 'react-helmet'
 
 // markup
 const Layout = ( { pageTitle, pageHeading, children }) => {
+    const data = useStaticQuery(graphql`
+        query {
+            site {
+                siteMetadata {
+                    title
+                }
+            }
+        }
+    `)
+    const title = pageTitle + " | " + data.site.siteMetadata.title;
   return (
     <main className={styles.pageStyles}>
-      <title>{pageTitle}</title>
+      <title> | {data.site.siteMetadata.title}</title>
+      <Helmet title={title}/>
+      <h1 className={styles.siteTitle}>{data.site.siteMetadata.title}</h1>
       <nav>
         <ul className={styles.navLinks}>
             <li className={styles.navLinkItem}>
@@ -14,6 +27,9 @@ const Layout = ( { pageTitle, pageHeading, children }) => {
             </li>
             <li className={styles.navLinkItem}>
                 <Link to="/about" className={styles.navLinkText}>About</Link>
+            </li>
+            <li className={styles.navLinkItem}>
+                <Link to="/blog" className={styles.navLinkText}>Blog</Link>
             </li>
         </ul>
       </nav>
